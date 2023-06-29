@@ -1,0 +1,54 @@
+body {
+    background-color: yellow;
+    font-family: sans-serif;
+}
+button {
+    background-color:aquamarine
+}
+Input {
+    background-color: aquamarine;
+}
+select {
+    background-color: aquamarine;
+}
+
+.block1 {
+    margin: 0.5em;
+    border-style: solid;
+    background-color: #D0F4DE;
+    border: 1px solid #560bad;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em
+}
+.block2 {
+    margin: 5.1em;
+    border-style: solid;
+    background-color: #D0F4DE;
+    border: 1px solid #560bad;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em
+}
+.block3 {
+    margin: 5.1em;
+    border-style: solid;
+    background-color: #D0F4DE;
+    border: 1px solid #560bad;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em
+}
+.block4 {
+    margin: 0.5em;
+    border-style: solid;
+    background-color: #D0F4DE;
+    border: 1px solid #560bad;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em
+}

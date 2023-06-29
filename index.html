@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="code.js" defer></script>
+</head>
+
+<body>
+    <div x-data="{
+            message:'Hello',
+            name:'',
+            checknr:0,
+            select_shift:'',
+            The_usage:'',
+            avail_airtime:0,
+            change:'',
+            usage:'',
+            availAirtime:0,
+            Day:'',
+            which_day:'',
+
+        calculateEnoughAirtime() {
+           this.change =  enoughAirtime(this.usage, this.availAirtime);       
+        },
+        is_it_weekday(){
+            this.which_day=weekOrWeekend(this.Day);
+        }
+    }
+        ">
+       <div class="blocks">
+        <div class="block4">
+            <h3>Greet </h3>
+            <div x-text="message+ ' '+name" x-show="checknr>0"></div>
+            <input x-model="name" type="text" class="name_input">
+            <button @click="checknr=1">Greet</button>
+        </div>
+
+        <div class="block1">
+            <h3>Transport fee</h3>
+            <form x-on:submit.prevent="select_shift=shifts.value">
+                <div><label for="shifts"> Please select your shift time below:</label></div>
+                <select name="shifts" id="shifts">
+                    <option value="">Select time</option>
+                    <option value="R20">Morning </option>
+                    <option value="R10">Afternoon</option>
+                    <option value="Free">Evening</option>
+                </select>
+                <label x-text="select_shift"></label>
+                <div><button>submit</button></div>
+            </form>
+
+
+        </div>
+
+
+        <div class="block2">
+            <h3>Enough Airtime</h3>
+            <input type="text" x-model="usage">
+            <input type="text" x-model="availAirtime">
+            <div class="enoughAirtime" x-text="change"></div>
+            <button @click="calculateEnoughAirtime">submit</button>
+
+        </div>
+
+        <div class="block3">
+            <h3>Weekday or not?</h3>
+            <input x-model="Day">
+            <div class="which_day" x-text="which_day"></div>
+            <button @click="is_it_weekday" >submit</button>
+        </div>
+       </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
