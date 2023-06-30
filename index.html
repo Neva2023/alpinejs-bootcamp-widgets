@@ -36,7 +36,7 @@
         <div class="block4">
             <h3>Greet </h3>
             <div x-text="message+ ' '+name" x-show="checknr>0"></div>
-            <input x-model="name" type="text" class="name_input">
+            Greet this name:<input x-model="name" type="text" class="name_input">
             <button @click="checknr=1">Greet</button>
         </div>
 
@@ -60,18 +60,20 @@
 
         <div class="block2">
             <h3>Enough Airtime</h3>
-            <input type="text" x-model="usage">
-            <input type="text" x-model="availAirtime">
-            <div class="enoughAirtime" x-text="change"></div>
+            Usage:<input type="text" x-model="usage">
+            Available airtime:<input type="text" x-model="availAirtime">
             <button @click="calculateEnoughAirtime">submit</button>
+            <div class="enoughAirtime" x-text="change"></div>
+            
 
         </div>
 
         <div class="block3">
             <h3>Weekday or not?</h3>
-            <input x-model="Day">
-            <div class="which_day" x-text="which_day"></div>
+            Enter the day here:<input x-model="Day">
             <button @click="is_it_weekday" >submit</button>
+            <div class="which_day" x-text="which_day"></div>
+            
         </div>
        </div>
 
